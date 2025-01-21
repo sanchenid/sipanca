@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Video dan Dokumentasi</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #156bc2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        /* Video Card */
+        .video-card {
+            position: relative;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover .video-thumbnail img {
+            transform: scale(1.1);
+        }
+
+        .video-content {
+            padding: 15px;
+        }
+
+        .video-title {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .video-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .watch-button {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: white;
+            background-color: #3498db;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .watch-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* PDF Viewer */
+        .pdf-container {
+            margin: 20px auto;
+            max-width: 900px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pdf-title {
+            background-color: #156bc2;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            margin: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2984df;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            color: white;
+            background-color: #4c7acf;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: #4049b1;
+        }
+
+        .tab.active {
+            background-color: #c9c2bf;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Blog dan Artikel</h1>
+        <p>Menampilkan video dan dokumentasi proyek kami</p>
+        <nav class="tabs">
+            <a href="index.html" class="tab">Home</a>
+            <a href="fitur.html" class="tab">Fitur</a>
+            <a href="tentangkami.html" class="tab">About us</a>
+            <a href="info.html" class="tab">More</a>
+            <a href="galeri.html" class="tab">Galery</a>
+            <a href="blog.html" class="tab">Article</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <!-- Video Card 1 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="images/v1.png" alt="Thumbnail Video 1">
+            </div>
+            <div class="video-content">
+                <h3 class="video-title">Pembuatan Alat</h3>
+                <p class="video-description">Perancangan alat, perakitan hingga pembuatan prototype.</p>
+                <a href="https://youtu.be/LS3j3Jp87zU" class="watch-button" target="_blank">Tonton Sekarang</a>
+            </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="images/v2.png" alt="Thumbnail Video 2">
+            </div>
+            <div class="video-content">
+                <h3 class="video-title">Pengujian Alat</h3>
+                <p class="video-description">Pembuatan alat secara riggid hingga fase pengujian alat.</p>
+                <a href="https://youtu.be/sdaoOAD_jIc" class="watch-button" target="_blank">Tonton Sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Viewer -->
+    <div class="pdf-container">
+        <div class="pdf-title">Presentasi Hasil (PDF Viewer)</div>
+        <iframe src="dokumen/presentasi.pdf"></iframe>
+    </div>
+    <div class="pdf-container">
+        <div class="pdf-title">Laporan Akhir (PDF Viewer)</div>
+        <iframe src="dokumen/laporanakhir.pdf"></iframe>
+    </div>
+
+    <div class="footer">
+        <p>&copy; SanchenID 2025 Proyek Keteknikan Kelompok 3 - Institut Teknologi Nasional Yogyakarta</p>
+    </div>
+
+</body>
+
+</html>
