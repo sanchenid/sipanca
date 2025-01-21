@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,8 @@
             padding: 20px;
         }
 
-        .features, .results {
+        .features,
+        .results {
             margin-bottom: 40px;
         }
 
@@ -130,20 +132,79 @@
             padding: 20px;
             margin-top: 20px;
         }
+
+        /* Navigasi Utama */
         .tabs {
             display: flex;
             justify-content: center;
+            /* Posisi tengah */
+            gap: 15px;
+            /* Jarak antar tombol */
             margin-top: 10px;
+            flex-wrap: wrap;
+            /* Membungkus jika terlalu panjang */
         }
 
         .tab {
-            padding: 10px 20px;
-            margin: 0 5px;
-            text-decoration: none;
-            color: white;
-            background-color: #575fcf;
-            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4c7acf;
+            border-radius: 50%;
+            /* Membuat tombol bulat */
+            width: 50px;
+            /* Ukuran default tombol */
+            height: 50px;
             transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .tab img {
+            width: 30px;
+            /* Ukuran default ikon */
+            height: auto;
+        }
+
+        .tab:hover {
+            background-color: #4049b1;
+        }
+
+        /* Media Queries untuk Smartphone */
+        @media (max-width: 768px) {
+            .tabs {
+                gap: 10px;
+                /* Kurangi jarak antar tombol */
+            }
+
+            .tab {
+                width: 40px;
+                /* Ukuran lebih kecil untuk layar kecil */
+                height: 40px;
+            }
+
+            .tab img {
+                width: 24px;
+                /* Ikon lebih kecil */
+            }
+        }
+
+        /* Media Queries untuk Layar Sangat Kecil */
+        @media (max-width: 480px) {
+            .tabs {
+                flex-wrap: wrap;
+                /* Tab otomatis terbungkus jika layar sangat kecil */
+                justify-content: space-around;
+                /* Tab tersebar rata */
+            }
+
+            .tab {
+                width: 35px;
+                height: 35px;
+            }
+
+            .tab img {
+                width: 20px;
+            }
         }
 
         .tab:hover {
@@ -154,9 +215,9 @@
             background-color: #252a6e;
             font-weight: bold;
         }
-        
     </style>
 </head>
+
 <body>
 
     <div class="header">
@@ -165,12 +226,24 @@
     </div>
     <div class="header">
         <nav class="tabs">
-            <a href="index.html" class="tab">Home</a>
-            <a href="fitur.html" class="tab">Fitur</a>
-            <a href="tentangkami.html" class="tab">About us</a>
-            <a href="info.html" class="tab">More</a>
-            <a href="galeri.html" class="tab">Galery</a>
-            <a href="blog.html" class="tab">Article</a>
+            <a href="index.html" class="tab">
+                <img src="images/home.png" alt="Home" class="tab-icon">
+            </a>
+            <a href="fitur.html" class="tab">
+                <img src="images/fitur.png" alt="Fitur" class="tab-icon">
+            </a>
+            <a href="tentangkami.html" class="tab">
+                <img src="images/about.png" alt="About Us" class="tab-icon">
+            </a>
+            <a href="info.html" class="tab">
+                <img src="images/more.png" alt="More" class="tab-icon">
+            </a>
+            <a href="galeri.html" class="tab">
+                <img src="images/gallery-icon.png" alt="Gallery" class="tab-icon">
+            </a>
+            <a href="blog.html" class="tab">
+                <img src="images/blog.png" alt="Article" class="tab-icon">
+            </a>
         </nav>
     </div>
     <div class="container">
@@ -209,7 +282,8 @@
                 <img src="images/banner.png" alt="Hasil Pengujian 1" id="slider-image">
                 <button class="next" onclick="nextSlide()">&#10095;</button>
             </div>
-            <p style="text-align: center; margin-top: 10px;">Hasil menunjukkan sistem berfungsi dengan akurasi tinggi dalam membaca data cuaca.</p>
+            <p style="text-align: center; margin-top: 10px;">Hasil menunjukkan sistem berfungsi dengan akurasi tinggi
+                dalam membaca data cuaca.</p>
         </div>
         <div class="results">
             <h2>Skema Rangkaian</h2>
@@ -249,4 +323,5 @@
         }
     </script>
 </body>
+
 </html>
